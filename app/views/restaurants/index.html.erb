@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>List of restaurants</h1>
+    <% @restaurants.each do |restaurant| %>
+        <div class="restaurant-card">
+          <%= link_to restaurant_path(restaurant) do %>
+            <div class="restaurant-card-name">
+              <%= image_tag("https://picsum.photos/300/200/?random") %>
+              <strong><%= restaurant.name %></strong> (<%= restaurant.category %>)
+            </div>
+            <div class="restaurant-card-info">
+              <p>Address : <%= restaurant.address %></p>
+              <p>Phone number: <%= restaurant.phone_number %></p>
+            </div>
+          <% end %>
+        </div>
+    <% end %>
+    <%= link_to "Add restaurant", new_restaurant_path, class: "btn btn-primary"%>
+</div>
+
+
+

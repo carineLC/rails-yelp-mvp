@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+.btn {
+  background-color: rgb(253, 45, 255);
+  border: rgb(253, 45, 255);
+}
+
+.btn:hover {
+  background-color: rgba(253, 45, 255, 0.5);
+  border: rgba(253, 45, 255, 0.5);
+}
+
+
+.restaurant-card {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.restaurant-card a {
+  text-decoration: none;
+  color: rgb(130, 130, 130);
+}
+
+.restaurant-card a:hover {
+  color: #fd91ff;
+}
+
+.restaurant-card-name {
+  margin-bottom: 10px;
+}
+
+.restaurant-card-info {
+  margin-bottom: 20px;
+}

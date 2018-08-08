@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="image">
+    <%= image_tag("https://picsum.photos/1150/300/?random") %>
+  </div>
+  <div class="restaurant-card-name">
+    <h3><strong><%= @restaurant.name %></strong> (<%= @restaurant.category %>)</h3>
+  </div>
+  <div class="restaurant-card-info">
+    <p>Address : <%= @restaurant.address %></p>
+    <p>Phone number: <%= @restaurant.phone_number %></p>
+  </div>
+  <div class="review">
+    <% if @reviews.first %>
+      <strong>Reviews</strong>
+    <% end %>
+    <ul>
+      <% @reviews.each do |review| %>
+        <li><%= review.content %> (<%= review.rating %>/5)</li>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to "Add a review",  new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <br>
+  <br>
+  <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-primary" %>
+</div>
